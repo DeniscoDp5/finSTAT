@@ -13,7 +13,8 @@
                     // phonegap.remote.username=myname@domain.com
                     // phonegap.remote.password=mys3cr3tp@ssw0rd
                     //"remote":false,
-
+                    "platform": "android",
+                    "remote": true,
                     "id": "it.dcp.finSTAT",
                     "name": "finSTAT"
                 }

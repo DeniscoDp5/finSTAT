@@ -908,11 +908,15 @@ $include-ext-window-messagebox: dynamic(true);;
 $include-ext-window-toast: dynamic(true);;
 $include-ext-window-window: dynamic(true);;
 $include-finstat-application: dynamic(true);;
-$include-finstat-store-personnel: dynamic(true);;
-$include-finstat-view-main-list: dynamic(true);;
-$include-finstat-view-main-main: dynamic(true);;
-$include-finstat-view-main-maincontroller: dynamic(true);;
-$include-finstat-view-main-mainmodel: dynamic(true);;
+$include-finstat-view-legal-legal: dynamic(true);;
+$include-finstat-view-legal-legalcontroller: dynamic(true);;
+$include-finstat-view-legal-legalmodel: dynamic(true);;
+$include-finstat-view-main-maincontainer: dynamic(true);;
+$include-finstat-view-main-maincontainercontroller: dynamic(true);;
+$include-finstat-view-main-maincontainermodel: dynamic(true);;
+$include-finstat-view-settings-settings: dynamic(true);;
+$include-finstat-view-settings-settingscontroller: dynamic(true);;
+$include-finstat-view-settings-settingsmodel: dynamic(true);;
 $output-paths: ("path": "../resources");
 
 /* ======================== ETC ======================== */
@@ -1372,11 +1376,3 @@ $relative-image-path-for-uis: $theme-triton-resource-path;
 @import '../../../../../ext/classic/theme-triton/sass/src/menu/Menu';
 @import '../../../../../ext/classic/theme-triton/sass/src/tab/Tab';
 @import '../../../../../ext/classic/theme-triton/sass/src/window/Toast';
-
-/* including package finSTAT */
-$finSTAT-resource-root: '' !default;
-$finSTAT-resource-path: 'images' !default;
-$current-package: false;
-$current-resource-root: $finSTAT-resource-root;
-$relative-image-path-for-uis: $finSTAT-resource-path;
-@import '../../../../../sass/src/view/main/Main';

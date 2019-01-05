@@ -5,13 +5,12 @@
  */
 Ext.define('finSTAT.Application', {
     extend: 'Ext.app.Application',
-    
+
     name: 'finSTAT',
 
     stores: [
         // TODO: add global / shared stores here
     ],
-    
     launch: function () {
         // TODO - Launch the application
     },
@@ -24,5 +23,37 @@ Ext.define('finSTAT.Application', {
                 }
             }
         );
+    },
+    defaultToken: 'finSTAT',
+
+    routes: {
+        'finSTAT/settings': 'onSettings',
+        'finSTAT/legal': 'onLegal'
+    },
+
+    onSettings: function () {
+        console.log('onSetting');
+        this.resetMainView();
+        this.getMainView().add({
+            xtype: 'settings-settings'
+        });
+    },
+
+    onLegal: function () {
+        console.log('onSetting');
+        this.resetMainView();
+        this.getMainView().add({
+            xtype: 'legal-legal'
+        });
+    },
+
+    resetMainView: function () {
+        var mainView = this.getMainView();
+        var items = mainView.items.items;
+
+        for(var i =0; i< items.length; i++) {
+            mainView.remove(items[i]);
+        }
     }
+
 });
